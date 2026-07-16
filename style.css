@@ -1,24 +1,24 @@
 /* ===== PALETA HARMONIZADA COM SAKURA ===== */
 :root {
-    -bg: #f6f2ee;
-    -bg-alt: #ffffff;
-    -primary: #b8856a;
-    -primary-dark: #9a6e54;
-    -primary-light: #d4a88c;
-    -primary-lighter: #ede0d5;
-    -text: #5c5550;
-    -text-dark: #3d3632;
-    -text-light: #8a8280;
-    -white: #ffffff;
-    -border: #e5ddd6;
-    -shadow: rgba(160, 120, 90, 0.12);
-    -rose: #c49098;
-    -rose-light: #d4a0a8;
-    -rose-dark: #a87078;
-    -sage: #8a9e88;
-    -sage-light: #a8b8a6;
-    -sage-dark: #6a8068;
-    -champagne: #c8b498;
+    --bg: #f6f2ee;
+    --bg-alt: #ffffff;
+    --primary: #b8856a;
+    --primary-dark: #9a6e54;
+    --primary-light: #d4a88c;
+    --primary-lighter: #ede0d5;
+    --text: #5c5550;
+    --text-dark: #3d3632;
+    --text-light: #8a8280;
+    --white: #ffffff;
+    --border: #e5ddd6;
+    --shadow: rgba(160, 120, 90, 0.12);
+    --rose: #c49098;
+    --rose-light: #d4a0a8;
+    --rose-dark: #a87078;
+    --sage: #8a9e88;
+    --sage-light: #a8b8a6;
+    --sage-dark: #6a8068;
+    --champagne: #c8b498;
 }
 
 /* ===== RESET ===== */
