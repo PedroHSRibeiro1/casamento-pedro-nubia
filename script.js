@@ -7,7 +7,7 @@ function atualizarContador() {
 
     if (diferenca <= 0) {
         document.getElementById("countdown").innerHTML =
-            "<h2 style='font-family:Alex Brush,cursive;font-size:42px;color:#fff;text-shadow:0 3px 15px rgba(80,50,35,.3)'>Hoje é o grande dia!</h2>";
+            "<h2 style='font-family:Alex Brush,cursive;font-size:42px;color:#fff;text-shadow:0 3px 15px rgba(30,15,10,.5)'>Hoje é o grande dia!</h2>";
         return;
     }
 
@@ -27,7 +27,6 @@ setInterval(atualizarContador, 1000);
 
 // ===== NAV SCROLL =====
 const nav = document.querySelector("nav");
-
 window.addEventListener("scroll", () => {
     nav.classList.toggle("scrolled", window.scrollY > 80);
 });
