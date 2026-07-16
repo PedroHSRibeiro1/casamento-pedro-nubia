@@ -1,24 +1,24 @@
-/* ===== PALETA "ROMANTIC SAGE & DUSTY ROSE" ===== */
+/* ===== PALETA HARMONIZADA COM SAKURA ===== */
 :root {
-    --bg: #f8f5f1;
-    --bg-alt: #ffffff;
-    --primary: #b8856a;
-    --primary-dark: #9a6e54;
-    --primary-light: #d4a88c;
-    --primary-lighter: #ede0d5;
-    --text: #5c5550;
-    --text-dark: #3d3632;
-    --text-light: #8a8280;
-    --white: #ffffff;
-    --border: #e5ddd6;
-    --shadow: rgba(160, 120, 90, 0.12);
-    --rose: #c49098;
-    --rose-light: #d4a0a8;
-    --rose-dark: #a87078;
-    --sage: #8a9e88;
-    --sage-light: #a8b8a6;
-    --sage-dark: #6a8068;
-    --champagne: #c8b498;
+    -bg: #f6f2ee;
+    -bg-alt: #ffffff;
+    -primary: #b8856a;
+    -primary-dark: #9a6e54;
+    -primary-light: #d4a88c;
+    -primary-lighter: #ede0d5;
+    -text: #5c5550;
+    -text-dark: #3d3632;
+    -text-light: #8a8280;
+    -white: #ffffff;
+    -border: #e5ddd6;
+    -shadow: rgba(160, 120, 90, 0.12);
+    -rose: #c49098;
+    -rose-light: #d4a0a8;
+    -rose-dark: #a87078;
+    -sage: #8a9e88;
+    -sage-light: #a8b8a6;
+    -sage-dark: #6a8068;
+    -champagne: #c8b498;
 }
 
 /* ===== RESET ===== */
@@ -58,7 +58,7 @@ nav {
 }
 
 nav.scrolled {
-    background: rgba(248, 245, 241, 0.96);
+    background: rgba(246, 242, 238, 0.96);
     backdrop-filter: blur(12px);
     padding: 14px 20px;
     box-shadow: 0 2px 30px rgba(0, 0, 0, 0.06);
@@ -107,33 +107,24 @@ nav a:hover::after { transform: translateX(-50%) scaleX(1); }
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    /* Fallback caso a imagem não carregue */
-    background: linear-gradient(170deg, #d8d0c8 0%, #c5bdb5 50%, #b0a89f 100%);
+    background: url("https://storage.googleapis.com/icaseiinstitucionalprod/layouts/statics/sakura1/assets/background-e8dae1bf.jpg") center/cover no-repeat fixed;
 }
 
-/* Camada da imagem de fundo */
-.hero-bg-image {
-    position: absolute;
-    inset: 0;
-    background: url("assets/img/fundo.jpg") center/cover no-repeat;
-    z-index: 0;
-}
-
-/* Overlay quente sobre a imagem */
+/* Overlay suave — deixa a textura do sakura aparecer */
 .hero-overlay {
     position: absolute;
     inset: 0;
     background: linear-gradient(
         180deg,
-        rgba(180, 168, 155, 0.45) 0%,
-        rgba(160, 145, 130, 0.55) 40%,
-        rgba(140, 125, 110, 0.65) 100%
+        rgba(245, 235, 228, 0.30) 0%,
+        rgba(235, 220, 210, 0.40) 40%,
+        rgba(220, 200, 190, 0.50) 100%
     );
     z-index: 1;
     pointer-events: none;
 }
 
-/* ===== PONTOS DOURADOS CHAMPAGNE ===== */
+/* ===== PONTOS CHAMPAGNE ===== */
 .hero-sparkles {
     position: absolute;
     inset: 0;
@@ -147,14 +138,14 @@ nav a:hover::after { transform: translateX(-50%) scaleX(1); }
     top: var(--sy);
     width: var(--sd);
     height: var(--sd);
-    background: radial-gradient(circle, rgba(200, 180, 152, 0.6), rgba(200, 180, 152, 0.0));
+    background: radial-gradient(circle, rgba(200, 180, 152, 0.55), rgba(200, 180, 152, 0.0));
     border-radius: 50%;
     animation: sparkle 3.5s ease-in-out infinite var(--sdelay);
 }
 
 @keyframes sparkle {
-    0%, 100% { opacity: 0.15; transform: scale(0.8); }
-    50% { opacity: 0.7; transform: scale(1.3); }
+    0%, 100% { opacity: 0.12; transform: scale(0.8); }
+    50% { opacity: 0.65; transform: scale(1.3); }
 }
 
 /* ===== RAMOS FLORAIS ===== */
@@ -206,6 +197,8 @@ nav a:hover::after { transform: translateX(-50%) scaleX(1); }
     max-width: 800px;
     padding: 20px;
     animation: heroFadeIn 1.5s ease-out;
+    /* Sombra de texto forte pra garantir leitura sobre a imagem */
+    text-shadow: 0 2px 8px rgba(80, 50, 35, 0.35);
 }
 
 @keyframes heroFadeIn {
@@ -219,7 +212,7 @@ nav a:hover::after { transform: translateX(-50%) scaleX(1); }
     text-transform: uppercase;
     letter-spacing: 6px;
     font-weight: 400;
-    color: rgba(255, 255, 255, 0.70);
+    color: rgba(255, 255, 255, 0.80);
     margin-bottom: 20px;
 }
 
@@ -228,7 +221,7 @@ nav a:hover::after { transform: translateX(-50%) scaleX(1); }
     font-size: clamp(52px, 10vw, 105px);
     font-weight: 400;
     line-height: 1.1;
-    text-shadow: 0 3px 18px rgba(60, 40, 25, 0.25);
+    text-shadow: 0 3px 20px rgba(80, 50, 35, 0.30);
     margin-bottom: 10px;
 }
 
@@ -245,7 +238,7 @@ nav a:hover::after { transform: translateX(-50%) scaleX(1); }
 .hero-divider {
     width: 70px;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.50), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.60), transparent);
     margin: 22px auto;
 }
 
@@ -254,7 +247,7 @@ nav a:hover::after { transform: translateX(-50%) scaleX(1); }
     font-size: 20px;
     font-weight: 300;
     letter-spacing: 4px;
-    color: rgba(255, 255, 255, 0.82);
+    color: rgba(255, 255, 255, 0.88);
     text-transform: uppercase;
 }
 
@@ -270,16 +263,16 @@ nav a:hover::after { transform: translateX(-50%) scaleX(1); }
 .tempo {
     width: 95px;
     padding: 20px 8px;
-    background: rgba(255, 255, 255, 0.10);
+    background: rgba(255, 255, 255, 0.14);
     backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.22);
     border-radius: 14px;
     text-align: center;
     transition: background 0.3s, transform 0.3s;
 }
 
 .tempo:hover {
-    background: rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.22);
     transform: translateY(-2px);
 }
 
@@ -291,10 +284,11 @@ nav a:hover::after { transform: translateX(-50%) scaleX(1); }
     font-weight: 300;
     line-height: 1;
     margin-bottom: 8px;
+    text-shadow: 0 1px 6px rgba(80, 50, 35, 0.25);
 }
 
 .tempo small {
-    color: rgba(255, 255, 255, 0.60);
+    color: rgba(255, 255, 255, 0.70);
     text-transform: uppercase;
     font-size: 8px;
     letter-spacing: 2px;
@@ -346,7 +340,7 @@ nav a:hover::after { transform: translateX(-50%) scaleX(1); }
     display: block;
     width: 22px;
     height: 36px;
-    border: 1.5px solid rgba(255, 255, 255, 0.28);
+    border: 1.5px solid rgba(255, 255, 255, 0.35);
     border-radius: 11px;
     position: relative;
 }
@@ -359,7 +353,7 @@ nav a:hover::after { transform: translateX(-50%) scaleX(1); }
     transform: translateX(-50%);
     width: 3px;
     height: 7px;
-    background: rgba(255, 255, 255, 0.50);
+    background: rgba(255, 255, 255, 0.55);
     border-radius: 3px;
     animation: scrollBounce 2s ease-in-out infinite;
 }
