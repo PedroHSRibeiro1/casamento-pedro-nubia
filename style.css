@@ -12,6 +12,9 @@
     --white: #ffffff;
     --border: #e8ddd1;
     --shadow: rgba(184, 146, 108, 0.15);
+    --hero-bg-top: #c8c2bc;
+    --hero-bg-mid: #b5afa8;
+    --hero-bg-bottom: #a09a93;
 }
 
 /* ===== RESET ===== */
@@ -76,7 +79,7 @@ nav ul {
 }
 
 nav a {
-    color: #fff;
+    color: rgba(255, 255, 255, 0.90);
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 2.5px;
@@ -106,7 +109,13 @@ nav a:hover::after {
 .hero {
     position: relative;
     min-height: 100vh;
-    background: url("assets/img/fundo.jpg") center/cover no-repeat;
+    /* Fundo cinza gradiente (sem imagem de fundo) */
+    background: linear-gradient(
+        170deg,
+        var(--hero-bg-top) 0%,
+        var(--hero-bg-mid) 45%,
+        var(--hero-bg-bottom) 100%
+    );
     display: flex;
     justify-content: center;
     align-items: center;
@@ -118,16 +127,88 @@ nav a:hover::after {
     inset: 0;
     background: linear-gradient(
         180deg,
-        rgba(0, 0, 0, 0.15) 0%,
-        rgba(0, 0, 0, 0.40) 50%,
-        rgba(0, 0, 0, 0.60) 100%
+        rgba(0, 0, 0, 0.05) 0%,
+        rgba(0, 0, 0, 0.12) 50%,
+        rgba(0, 0, 0, 0.20) 100%
     );
     z-index: 1;
+    pointer-events: none;
 }
 
+/* ===== PONTOS DOURADOS ===== */
+.hero-sparkles {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.hero-sparkles i {
+    position: absolute;
+    left: var(--sx);
+    top: var(--sy);
+    width: var(--sd);
+    height: var(--sd);
+    background: radial-gradient(circle, rgba(200, 170, 120, 0.7), rgba(200, 170, 120, 0.0));
+    border-radius: 50%;
+    animation: sparkle 3s ease-in-out infinite var(--sdelay);
+}
+
+@keyframes sparkle {
+    0%, 100% { opacity: 0.2; transform: scale(0.8); }
+    50% { opacity: 0.9; transform: scale(1.4); }
+}
+
+/* ===== RAMOS FLORAIS ===== */
+.floral-left,
+.floral-right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 32%;
+    max-width: 380px;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.floral-left {
+    left: 0;
+}
+
+.floral-right {
+    right: 0;
+}
+
+.floral-svg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Animação suave das flores */
+.flor {
+    animation: florPulse 4s ease-in-out infinite;
+    transform-origin: center;
+}
+
+@keyframes florPulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.04); opacity: 0.92; }
+}
+
+.botao-flor {
+    animation: botaoPulse 3.5s ease-in-out infinite;
+}
+
+@keyframes botaoPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+}
+
+/* ===== CONTEÚDO DO HERO ===== */
 .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 10;
     text-align: center;
     color: #fff;
     max-width: 800px;
@@ -146,7 +227,7 @@ nav a:hover::after {
     text-transform: uppercase;
     letter-spacing: 6px;
     font-weight: 400;
-    color: rgba(255, 255, 255, 0.80);
+    color: rgba(255, 255, 255, 0.75);
     margin-bottom: 20px;
 }
 
@@ -155,7 +236,7 @@ nav a:hover::after {
     font-size: clamp(56px, 10vw, 110px);
     font-weight: 400;
     line-height: 1.1;
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.20);
     margin-bottom: 10px;
 }
 
@@ -172,7 +253,7 @@ nav a:hover::after {
 .hero-divider {
     width: 80px;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.55), transparent);
     margin: 24px auto;
 }
 
@@ -181,7 +262,7 @@ nav a:hover::after {
     font-size: 22px;
     font-weight: 300;
     letter-spacing: 4px;
-    color: rgba(255, 255, 255, 0.90);
+    color: rgba(255, 255, 255, 0.85);
     text-transform: uppercase;
 }
 
@@ -199,7 +280,7 @@ nav a:hover::after {
     padding: 22px 10px;
     background: rgba(255, 255, 255, 0.10);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.20);
     border-radius: 16px;
     text-align: center;
     transition: background 0.3s, transform 0.3s;
@@ -221,7 +302,7 @@ nav a:hover::after {
 }
 
 .tempo small {
-    color: rgba(255, 255, 255, 0.70);
+    color: rgba(255, 255, 255, 0.65);
     text-transform: uppercase;
     font-size: 9px;
     letter-spacing: 2px;
@@ -266,14 +347,14 @@ nav a:hover::after {
     bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 2;
+    z-index: 10;
 }
 
 .hero-scroll-indicator span {
     display: block;
     width: 24px;
     height: 38px;
-    border: 2px solid rgba(255, 255, 255, 0.35);
+    border: 2px solid rgba(255, 255, 255, 0.30);
     border-radius: 12px;
     position: relative;
 }
@@ -286,7 +367,7 @@ nav a:hover::after {
     transform: translateX(-50%);
     width: 3px;
     height: 8px;
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.55);
     border-radius: 3px;
     animation: scrollBounce 2s ease-in-out infinite;
 }
@@ -776,6 +857,14 @@ footer::before {
         width: 40px;
     }
 
+    /* Ramos florais menores no tablet */
+    .floral-left,
+    .floral-right {
+        width: 28%;
+        max-width: 300px;
+        opacity: 0.85;
+    }
+
     .galeria-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 12px;
@@ -849,6 +938,14 @@ footer::before {
         padding: 70px 6%;
     }
 
+    /* No mobile, os ramos ficam mais discretos */
+    .floral-left,
+    .floral-right {
+        width: 22%;
+        max-width: 180px;
+        opacity: 0.65;
+    }
+
     .galeria-grid {
         grid-template-columns: 1fr;
         max-width: 400px;
@@ -875,6 +972,11 @@ footer::before {
     }
 
     .hero-scroll-indicator {
+        display: none;
+    }
+
+    /* Menos pontos dourados no mobile */
+    .hero-sparkles i:nth-child(n+12) {
         display: none;
     }
 }
