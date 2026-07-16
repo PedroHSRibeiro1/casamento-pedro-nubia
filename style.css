@@ -1,9 +1,11 @@
-:root {
-    –bg: #faf7f3;
-    –primary: #b8926c;
-    –primary2: #d7b899;
-    –text: #444;
-    –white: #fff;
+:root{
+
+    -bg:#faf7f3;
+    -primary:#b8926c;
+    -primary2:#d7b899;
+    -text:#444;
+    -white:#ffffff;
+
 }
 
 * {
@@ -17,7 +19,7 @@ html {
 }
 
 body {
-    font-family: ‘Poppins’, sans-serif;
+    font-family:'Open Sans',sans-serif;
     background: var(–bg);
     color: var(–text);
     line-height: 1.8;
@@ -61,8 +63,15 @@ nav a {
     font-weight: 500;
 }
 
-nav a:hover {
-    color: #f4d3c2
+nav a{
+
+    color:#fff;
+    text-decoration:none;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:14px;
+    font-weight:600;
+    transition:.3s;
 }
 
 .hero-content {
@@ -74,19 +83,24 @@ nav a:hover {
     padding: 20px;
 }
 
-.hero-content h1 {
-    font-family: ‘Great Vibes’, cursive;
-    font-size: 80px;
-    text-shadow: 0 4px 12px rgba(0, 0, 0, .4);
+.hero-content h1{
+    font-family:'Alex Brush',cursive;
+    font-size:95px;
+    font-weight:400;
+    letter-spacing:2px;
+    text-shadow:0 5px 15px rgba(0,0,0,.45);
 }
 
 .hero-content .e {
     font-size: 50px
 }
 
-.hero-content p {
-    margin: 25px auto;
-    max-width: 650px;
+.hero-content p{
+    margin:30px auto;
+    max-width:700px;
+    font-size:20px;
+    line-height:1.9;
+    font-weight:300;
 }
 
 .botao,
@@ -97,7 +111,8 @@ nav a:hover {
     color: #fff;
     text-decoration: none;
     border-radius: 40px;
-    background: linear-gradient(135deg, var(–primary2), var(–primary));
+    background:linear-gradient(135deg,#d9b38c,#b88b5d);
+    box-shadow:0 10px 25px rgba(184,146,108,.35);
     transition: .3s;
 }
 
@@ -117,10 +132,11 @@ nav a:hover {
 .tempo {
     width: 120px;
     padding: 20px;
-    background: rgba(255, 255, 255, .15);
+    background:rgba(255,255,255,.18);
     backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, .3);
     border-radius: 20px;
+    box-shadow:0 12px 30px rgba(0,0,0,.15);
 }
 
 .tempo span {
@@ -141,12 +157,14 @@ section {
     scroll-margin-top: 90px;
 }
 
-section h2 {
-    text-align: center;
-    font-size: 60px;
-    color: var(–primary);
-    font-family: ‘Great Vibes’, cursive;
-    margin-bottom: 30px;
+section h2{
+
+    font-family:'Alex Brush',cursive;
+    font-size:70px;
+    color:var(-primary);
+    margin-bottom:35px;
+    font-weight:400;
+
 }
 
 section p {
@@ -207,7 +225,7 @@ audio {
 }
 
 footer {
-    background: var(–primary);
+    background:#9e7954;
     color: #fff;
     text-align: center;
     padding: 30px;
@@ -238,4 +256,23 @@ footer {
     .tempo span {
         font-size: 30px
     }
+}
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        rgba(0,0,0,.20),
+        rgba(0,0,0,.50)
+    );
+
+}
+section:nth-child(even){
+
+    background:#fff;
+
 }
