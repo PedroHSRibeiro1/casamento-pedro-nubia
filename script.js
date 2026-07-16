@@ -7,7 +7,7 @@ function atualizarContador() {
 
     if (diferenca <= 0) {
         document.getElementById("countdown").innerHTML =
-            "<h2 style='font-family:Alex Brush,cursive;font-size:42px;color:#fff;text-shadow:0 4px 15px rgba(0,0,0,.3)'>Hoje é o grande dia!</h2>";
+            "<h2 style='font-family:Alex Brush,cursive;font-size:42px;color:#fff;text-shadow:0 4px 15px rgba(0,0,0,.2)'>Hoje é o grande dia!</h2>";
         return;
     }
 
@@ -38,7 +38,6 @@ window.addEventListener("scroll", () => {
 
 // ===== REVEAL ON SCROLL =====
 function initReveal() {
-    // Adiciona classe .reveal nos elementos que devem animar
     const targets = document.querySelectorAll(
         ".historia-item, .evento-card, .galeria-item, .rsvp-form, section > p"
     );
@@ -72,7 +71,6 @@ if (form) {
     form.addEventListener("submit", function (e) {
         e.preventDefault();
 
-        // Simula envio
         const btn = form.querySelector(".botao");
         const textoOriginal = btn.textContent;
         btn.textContent = "Enviando...";
@@ -89,7 +87,7 @@ if (form) {
     });
 }
 
-// ===== SMOOTH SCROLL PARA LINKS INTERNOS =====
+// ===== SMOOTH SCROLL =====
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
         e.preventDefault();
