@@ -1,49 +1,241 @@
-:root{ –bg:#faf7f3; –primary:#b8926c; –primary2:#d7b899; –text:#444;
-–white:#fff; }
+:root {
+    –bg: #faf7f3;
+    –primary: #b8926c;
+    –primary2: #d7b899;
+    –text: #444;
+    –white: #fff;
+}
 
-*{margin:0;padding:0;box-sizing:border-box} html{scroll-behavior:smooth}
-body{ font-family:‘Poppins’,sans-serif; background:var(–bg);
-color:var(–text); line-height:1.8; } .hero{ position:relative;
-min-height:100vh; background:url(“assets/img/fundo.jpg”) center/cover
-no-repeat fixed; display:flex; justify-content:center;
-align-items:center; } .overlay{ position:absolute;inset:0;
-background:rgba(0,0,0,.45); } nav{ position:absolute;
-top:0;left:0;width:100%; display:flex; justify-content:center;
-padding:25px; z-index:2; } nav ul{ display:flex; gap:35px;
-list-style:none; } nav a{ color:#fff; text-decoration:none;
-font-weight:500; } nav a:hover{color:#f4d3c2} .hero-content{
-position:relative; z-index:2; text-align:center; color:#fff;
-max-width:900px; padding:20px; } .hero-content h1{ font-family:‘Great
-Vibes’,cursive; font-size:80px; text-shadow:0 4px 12px rgba(0,0,0,.4); }
-.hero-content .e{font-size:50px} .hero-content p{ margin:25px auto;
-max-width:650px; } .botao,#rsvp a{ display:inline-block;
-margin-top:35px; padding:15px 45px; color:#fff; text-decoration:none;
-border-radius:40px;
-background:linear-gradient(135deg,var(–primary2),var(–primary));
-transition:.3s; } .botao:hover,#rsvp a:hover{
-transform:translateY(-3px); } #countdown{ display:flex;
-justify-content:center; gap:20px; flex-wrap:wrap; margin-top:40px; }
-.tempo{ width:120px; padding:20px; background:rgba(255,255,255,.15);
-backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,.3);
-border-radius:20px; } .tempo span{ display:block; font-size:42px;
-color:#fff; font-weight:bold; } .tempo small{ color:#fff;
-text-transform:uppercase; font-size:12px; } section{ padding:90px 12%;
-scroll-margin-top:90px; } section h2{ text-align:center; font-size:60px;
-color:var(–primary); font-family:‘Great Vibes’,cursive;
-margin-bottom:30px; } section
-p{text-align:center;max-width:900px;margin:auto} #evento
-h3{color:var(–primary);margin-top:25px} .mapa-container{ display:flex;
-justify-content:center; margin:50px 0; } .mapa-container iframe{
-width:100%; max-width:1000px; height:500px; border:0;
-border-radius:20px; box-shadow:0 15px 40px rgba(0,0,0,.2); } #galeria{
-display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px; justify-items:center; } #galeria img{ width:100%;
-max-width:320px; height:420px; object-fit:cover; border-radius:20px;
-transition:.3s; box-shadow:0 10px 25px rgba(0,0,0,.18); } #galeria
-img:hover{ transform:scale(1.05); } audio{display:block;margin:30px
-auto;width:min(400px,95%)} #rsvp{text-align:center} footer{
-background:var(–primary); color:#fff; text-align:center; padding:30px; }
-@media(max-width:900px){ nav ul{flex-wrap:wrap;justify-content:center}
-.hero-content h1{font-size:55px} section{padding:70px 8%}
-.mapa-container iframe{height:350px} .tempo{width:90px} .tempo
-span{font-size:30px} }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    font-family: ‘Poppins’, sans-serif;
+    background: var(–bg);
+    color: var(–text);
+    line-height: 1.8;
+}
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    background: url(“assets/img/fundo.jpg”) center/cover no-repeat fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .45);
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    z-index: 2;
+}
+
+nav ul {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #f4d3c2
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    max-width: 900px;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-family: ‘Great Vibes’, cursive;
+    font-size: 80px;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, .4);
+}
+
+.hero-content .e {
+    font-size: 50px
+}
+
+.hero-content p {
+    margin: 25px auto;
+    max-width: 650px;
+}
+
+.botao,
+#rsvp a {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 15px 45px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 40px;
+    background: linear-gradient(135deg, var(–primary2), var(–primary));
+    transition: .3s;
+}
+
+.botao:hover,
+#rsvp a:hover {
+    transform: translateY(-3px);
+}
+
+#countdown {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.tempo {
+    width: 120px;
+    padding: 20px;
+    background: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, .3);
+    border-radius: 20px;
+}
+
+.tempo span {
+    display: block;
+    font-size: 42px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.tempo small {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+section {
+    padding: 90px 12%;
+    scroll-margin-top: 90px;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 60px;
+    color: var(–primary);
+    font-family: ‘Great Vibes’, cursive;
+    margin-bottom: 30px;
+}
+
+section p {
+    text-align: center;
+    max-width: 900px;
+    margin: auto
+}
+
+#evento h3 {
+    color: var(–primary);
+    margin-top: 25px
+}
+
+.mapa-container {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+.mapa-container iframe {
+    width: 100%;
+    max-width: 1000px;
+    height: 500px;
+    border: 0;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .2);
+}
+
+#galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    justify-items: center;
+}
+
+#galeria img {
+    width: 100%;
+    max-width: 320px;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: .3s;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .18);
+}
+
+#galeria img:hover {
+    transform: scale(1.05);
+}
+
+audio {
+    display: block;
+    margin: 30px auto;
+    width: min(400px, 95%)
+}
+
+#rsvp {
+    text-align: center
+}
+
+footer {
+    background: var(–primary);
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+}
+
+@media(max-width:900px) {
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center
+    }
+
+    .hero-content h1 {
+        font-size: 55px
+    }
+
+    section {
+        padding: 70px 8%
+    }
+
+    .mapa-container iframe {
+        height: 350px
+    }
+
+    .tempo {
+        width: 90px
+    }
+
+    .tempo span {
+        font-size: 30px
+    }
+}
