@@ -276,3 +276,76 @@ section:nth-child(even){
     background:#fff;
 
 }
+/* ===== TÍTULOS DAS SEÇÕES ===== */
+
+section h2{
+    width:100%;
+    text-align:center;
+    display:block;
+    margin:0 auto 50px auto;
+
+    font-family:'Alex Brush', cursive;
+    font-size:70px;
+    font-weight:400;
+    color:var(--primary);
+}
+
+/* Quando a seção utiliza Grid (Galeria) */
+
+#galeria h2{
+    grid-column:1 / -1;
+}
+
+/* Música */
+
+section audio{
+    display:block;
+    margin:35px auto;
+}
+
+/* Informações */
+
+#evento{
+    text-align:center;
+}
+
+#evento h3{
+    text-align:center;
+}
+
+#evento p{
+    text-align:center;
+}
+
+/* Nossa História */
+
+#historia{
+    text-align:center;
+}
+
+/* Galeria */
+
+#galeria{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+    justify-items:center;
+}
+
+/* Música */
+
+section:nth-of-type(5){
+    text-align:center;
+}
+.titulo-secao{
+    width:100%;
+    display:block;
+    text-align:center;
+    margin:0 auto 50px;
+
+    font-family:'Alex Brush', cursive;
+    font-size:72px;
+    font-weight:400;
+
+    color:var(-primary);
+}
