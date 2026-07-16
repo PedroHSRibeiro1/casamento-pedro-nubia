@@ -1,9 +1,453 @@
-body {
-    background: red;
-    color: white;
-    font-size: 30px;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-h1 {
-    color: yellow;
+html{
+
+scroll-behavior:smooth;
+
+}
+
+body{
+
+font-family:'Poppins',sans-serif;
+
+background:#faf7f3;
+
+color:#444;
+
+line-height:1.8;
+
+}
+
+/* HERO */
+
+.hero{
+
+position:relative;
+
+height:100vh;
+
+background:url("assets/img/fundo.jpg") center center/cover no-repeat;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+overflow:hidden;
+
+}
+
+.overlay{
+
+position:absolute;
+
+width:100%;
+
+height:100%;
+
+background:rgba(0,0,0,.45);
+
+backdrop-filter:blur(1px);
+
+}
+
+nav{
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+display:flex;
+
+justify-content:space-between;
+
+padding:25px 60px;
+
+z-index:20;
+
+}
+
+nav h2{
+
+color:white;
+
+font-weight:500;
+
+letter-spacing:2px;
+
+}
+
+nav ul{
+
+display:flex;
+
+gap:35px;
+
+list-style:none;
+
+}
+
+nav a{
+
+color:white;
+
+text-decoration:none;
+
+font-weight:500;
+
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#F4D3C2;
+
+}
+
+.hero-content{
+
+position:relative;
+
+z-index:10;
+
+text-align:center;
+
+color:white;
+
+padding:20px;
+
+max-width:800px;
+
+}
+
+.hero-content h1{
+
+font-family:'Great Vibes',cursive;
+
+font-size:80px;
+
+font-weight:normal;
+
+}
+
+.hero-content .e{
+
+font-size:55px;
+
+margin:-20px 0;
+
+}
+
+.hero-content p{
+
+margin:25px auto;
+
+font-size:20px;
+
+max-width:650px;
+
+}
+
+.hero-content h3{
+
+margin-bottom:40px;
+
+font-weight:300;
+
+letter-spacing:3px;
+
+}
+
+.botao{
+
+display:inline-block;
+
+margin-top:40px;
+
+padding:15px 45px;
+
+background:#d7b899;
+
+color:white;
+
+border-radius:40px;
+
+text-decoration:none;
+
+transition:.4s;
+
+font-size:18px;
+
+}
+
+.botao:hover{
+
+background:#b8926c;
+
+transform:translateY(-3px);
+
+}
+
+/* CONTADOR */
+
+#countdown{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:20px;
+
+font-size:42px;
+
+margin-top:30px;
+
+flex-wrap:wrap;
+
+}
+
+#countdown span{
+
+display:block;
+
+}
+
+#countdown span:nth-child(even){
+
+font-size:15px;
+
+font-weight:300;
+
+}
+
+.barra{
+
+width:1px;
+
+height:60px;
+
+background:white;
+
+opacity:.5;
+
+}
+
+/* SEÇÕES */
+
+section{
+
+padding:90px 12%;
+
+}
+
+section h2{
+
+font-family:'Great Vibes';
+
+font-size:60px;
+
+color:#b8926c;
+
+text-align:center;
+
+margin-bottom:40px;
+
+}
+
+section p{
+
+font-size:18px;
+
+text-align:center;
+
+max-width:850px;
+
+margin:auto;
+
+}
+
+/* EVENTO */
+
+#evento h3{
+
+margin-top:30px;
+
+color:#b8926c;
+
+font-size:25px;
+
+}
+
+iframe{
+
+margin-top:30px;
+
+border-radius:20px;
+
+box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+}
+
+/* GALERIA */
+
+#galeria{
+
+text-align:center;
+
+}
+
+#galeria img{
+
+width:320px;
+
+height:420px;
+
+object-fit:cover;
+
+border-radius:20px;
+
+margin:15px;
+
+transition:.4s;
+
+box-shadow:0 12px 25px rgba(0,0,0,.15);
+
+}
+
+#galeria img:hover{
+
+transform:scale(1.05);
+
+}
+
+/* ÁUDIO */
+
+audio{
+
+display:block;
+
+margin:30px auto;
+
+width:350px;
+
+}
+
+/* RSVP */
+
+#rsvp{
+
+text-align:center;
+
+}
+
+#rsvp a{
+
+display:inline-block;
+
+margin-top:35px;
+
+background:#b8926c;
+
+color:white;
+
+padding:18px 50px;
+
+text-decoration:none;
+
+border-radius:40px;
+
+transition:.3s;
+
+}
+
+#rsvp a:hover{
+
+background:#8f6d4d;
+
+}
+
+/* RODAPÉ */
+
+footer{
+
+background:#b8926c;
+
+color:white;
+
+padding:30px;
+
+text-align:center;
+
+font-size:18px;
+
+}
+
+/* RESPONSIVO */
+
+@media(max-width:900px){
+
+nav{
+
+flex-direction:column;
+
+gap:15px;
+
+padding:20px;
+
+}
+
+nav ul{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:20px;
+
+}
+
+.hero-content h1{
+
+font-size:55px;
+
+}
+
+.hero-content p{
+
+font-size:17px;
+
+}
+
+section{
+
+padding:70px 8%;
+
+}
+
+#galeria img{
+
+width:100%;
+
+height:auto;
+
+}
+
+#countdown{
+
+font-size:30px;
+
+}
+
 }
