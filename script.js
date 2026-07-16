@@ -7,7 +7,7 @@ function atualizarContador() {
 
     if (diferenca <= 0) {
         document.getElementById("countdown").innerHTML =
-            "<h2 style='font-family:Alex Brush,cursive;font-size:42px;color:#fff;text-shadow:0 4px 15px rgba(0,0,0,.2)'>Hoje é o grande dia!</h2>";
+            "<h2 style='font-family:Alex Brush,cursive;font-size:42px;color:#fff;text-shadow:0 3px 15px rgba(60,40,25,.25)'>Hoje é o grande dia!</h2>";
         return;
     }
 
@@ -25,30 +25,23 @@ function atualizarContador() {
 atualizarContador();
 setInterval(atualizarContador, 1000);
 
-// ===== NAV SCROLL EFFECT =====
+// ===== NAV SCROLL =====
 const nav = document.querySelector("nav");
 
 window.addEventListener("scroll", () => {
-    if (window.scrollY > 80) {
-        nav.classList.add("scrolled");
-    } else {
-        nav.classList.remove("scrolled");
-    }
+    nav.classList.toggle("scrolled", window.scrollY > 80);
 });
 
 // ===== REVEAL ON SCROLL =====
-function initReveal() {
+(function initReveal() {
     const targets = document.querySelectorAll(
         ".historia-item, .evento-card, .galeria-item, .rsvp-form, section > p"
     );
-
-    targets.forEach((el) => {
-        el.classList.add("reveal");
-    });
+    targets.forEach(el => el.classList.add("reveal"));
 
     const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry) => {
+        entries => {
+            entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add("visible");
                     observer.unobserve(entry.target);
@@ -58,10 +51,8 @@ function initReveal() {
         { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
     );
 
-    document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
-}
-
-initReveal();
+    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+})();
 
 // ===== RSVP FORM =====
 const form = document.getElementById("rsvpForm");
@@ -70,9 +61,8 @@ const sucesso = document.getElementById("rsvpSucesso");
 if (form) {
     form.addEventListener("submit", function (e) {
         e.preventDefault();
-
         const btn = form.querySelector(".botao");
-        const textoOriginal = btn.textContent;
+        const original = btn.textContent;
         btn.textContent = "Enviando...";
         btn.disabled = true;
         btn.style.opacity = "0.7";
@@ -80,7 +70,7 @@ if (form) {
         setTimeout(() => {
             form.style.display = "none";
             sucesso.classList.add("show");
-            btn.textContent = textoOriginal;
+            btn.textContent = original;
             btn.disabled = false;
             btn.style.opacity = "1";
         }, 1500);
@@ -88,12 +78,10 @@ if (form) {
 }
 
 // ===== SMOOTH SCROLL =====
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener("click", function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute("href"));
-        if (target) {
-            target.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
+        if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
     });
 });
