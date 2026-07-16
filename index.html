@@ -1,146 +1,223 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Pedro Henrique & Núbia</title>
-<link rel="stylesheet" href="style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedro & Núbia — 05.12.2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="hero">
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#historia">Nossa História</a></li>
+                <li><a href="#evento">Cerimônia</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#musica">Música</a></li>
+                <li><a href="#rsvp">Confirmar</a></li>
+            </ul>
+        </nav>
 
-<div class="overlay"></div>
+        <div class="hero-content">
+            <p class="hero-subtitle">Convidamos você para celebrar</p>
+            <h1 class="hero-names">Núbia <span class="hero-amp">&</span>Pedro Henrique </h1>
+            <div class="hero-divider"></div>
+            <p class="hero-date">05 de Dezembro de 2026</p>
+            <div id="countdown">
+                <div class="tempo">
+                    <span id="days">00</span>
+                    <small>Dias</small>
+                </div>
+                <div class="tempo">
+                    <span id="hours">00</span>
+                    <small>Horas</small>
+                </div>
+                <div class="tempo">
+                    <span id="minutes">00</span>
+                    <small>Minutos</small>
+                </div>
+                <div class="tempo">
+                    <span id="seconds">00</span>
+                    <small>Segundos</small>
+                </div>
+            </div>
+            <a href="#rsvp" class="botao">Confirmar Presença</a>
+        </div>
 
-<nav>
+        <div class="hero-scroll-indicator">
+            <span></span>
+        </div>
+    </section>
 
+    <!-- NOSSA HISTÓRIA -->
+    <section id="historia">
+        <div class="section-header">
+            <span class="section-ornament"></span>
+            <h2>Nossa História</h2>
+            <span class="section-ornament"></span>
+        </div>
+        <div class="historia-content">
+            <div class="historia-item">
+                <div class="historia-icon">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </div>
+                <h3>O Encontro</h3>
+                <p>Nos conhecemos de uma forma que parecia obra do destino. Desde o primeiro olhar, soubemos que algo especial estava começando.</p>
+            </div>
+            <div class="historia-timeline-line"></div>
+            <div class="historia-item">
+                <div class="historia-icon">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <h3>A Conquista</h3>
+                <p>Com cada dia que passava, nossa conexão ficava mais forte. Rimos juntos, choramos juntos e descobrimos que éramos feitos um para o outro.</p>
+            </div>
+            <div class="historia-timeline-line"></div>
+            <div class="historia-item">
+                <div class="historia-icon">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <h3>O Compromisso</h3>
+                <p>Depois de tantos momentos incríveis, chegou a hora de oficializar nosso amor. E agora, vamos celebrar essa união com as pessoas mais importantes das nossas vidas.</p>
+            </div>
+        </div>
+    </section>
 
-<ul>
+    <!-- CERIMÔNIA & RECEPÇÃO -->
+    <section id="evento">
+        <div class="section-header">
+            <span class="section-ornament"></span>
+            <h2>Cerimônia & Recepção</h2>
+            <span class="section-ornament"></span>
+        </div>
+        <div class="evento-cards">
+            <div class="evento-card">
+                <div class="evento-card-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                </div>
+                <h3>Cerimônia</h3>
+                <p class="evento-horario">16h00</p>
+                <p>Igreja Local<br>Rua das Flores, 123 — Centro</p>
+            </div>
+            <div class="evento-card-divider">
+                <span class="section-ornament vertical"></span>
+            </div>
+            <div class="evento-card">
+                <div class="evento-card-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M8 2v4"/><path d="M16 2v4"/><rect x="2" y="6" width="20" height="16" rx="2"/><path d="M12 10v6"/><path d="M9 13h6"/></svg>
+                </div>
+                <h3>Recepção</h3>
+                <p class="evento-horario">18h00</p>
+                <p>Salão de Festes<br>Av. das Palmeiras, 456 — Jardins</p>
+            </div>
+        </div>
+        <div class="mapa-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.197609396575!2d-46.65342368502164!3d-23.56507698468091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1635000000000!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
 
-<li><a href="#historia">Nossa História</a></li>
+    <!-- GALERIA -->
+    <section id="galeria">
+        <div class="section-header">
+            <span class="section-ornament"></span>
+            <h2>Galeria</h2>
+            <span class="section-ornament"></span>
+        </div>
+        <div class="galeria-grid">
+            <div class="galeria-item galeria-tall">
+                <img src="https://picsum.photos/seed/pedronubia1/600/800.jpg" alt="Foto do casal" loading="lazy">
+                <div class="galeria-overlay"><span>❤</span></div>
+            </div>
+            <div class="galeria-item">
+                <img src="https://picsum.photos/seed/pedronubia2/600/600.jpg" alt="Foto do casal" loading="lazy">
+                <div class="galeria-overlay"><span>❤</span></div>
+            </div>
+            <div class="galeria-item">
+                <img src="https://picsum.photos/seed/pedronubia3/600/600.jpg" alt="Foto do casal" loading="lazy">
+                <div class="galeria-overlay"><span>❤</span></div>
+            </div>
+            <div class="galeria-item">
+                <img src="https://picsum.photos/seed/pedronubia4/600/600.jpg" alt="Foto do casal" loading="lazy">
+                <div class="galeria-overlay"><span>❤</span></div>
+            </div>
+            <div class="galeria-item galeria-tall">
+                <img src="https://picsum.photos/seed/pedronubia5/600/800.jpg" alt="Foto do casal" loading="lazy">
+                <div class="galeria-overlay"><span>❤</span></div>
+            </div>
+            <div class="galeria-item">
+                <img src="https://picsum.photos/seed/pedronubia6/600/600.jpg" alt="Foto do casal" loading="lazy">
+                <div class="galeria-overlay"><span>❤</span></div>
+            </div>
+        </div>
+    </section>
 
-<li><a href="#evento">Evento</a></li>
+    <!-- MÚSICA -->
+    <section id="musica">
+        <div class="section-header">
+            <span class="section-ornament"></span>
+            <h2>Nossa Música</h2>
+            <span class="section-ornament"></span>
+        </div>
+        <p>Essa é a música que define o nosso amor. Ouça e sinta um pouco da nossa história juntos.</p>
+        <audio controls>
+            <source src="assets/audio/musica.mp3" type="audio/mpeg">
+            Seu navegador não suporta áudio HTML5.
+        </audio>
+    </section>
 
-<li><a href="#galeria">Galeria</a></li>
+    <!-- RSVP -->
+    <section id="rsvp">
+        <div class="section-header">
+            <span class="section-ornament"></span>
+            <h2>Confirmar Presença</h2>
+            <span class="section-ornament"></span>
+        </div>
+        <p>Confirme sua presença até 30 de novembro de 2026. Estamos ansiosos para celebrar esse momento com você!</p>
+        <form class="rsvp-form" id="rsvpForm">
+            <div class="form-group">
+                <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+                </div>
+                <div class="form-group">
+                    <select id="acompanhantes" name="acompanhantes" required>
+                        <option value="" disabled selected>Quantos acompanham?</option>
+                        <option value="0">Somente eu</option>
+                        <option value="1">+1 acompanhante</option>
+                        <option value="2">+2 acompanhantes</option>
+                        <option value="3">+3 acompanhantes</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <textarea id="mensagem" name="mensagem" rows="4" placeholder="Deixe uma mensagem para os noivos (opcional)"></textarea>
+            </div>
+            <button type="submit" class="botao">Enviar Confirmação</button>
+        </form>
+        <div class="rsvp-sucesso" id="rsvpSucesso">
+            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <h3>Presença Confirmada!</h3>
+            <p>Obrigado por confirmar. Mal podemos esperar para celebrar com você!</p>
+        </div>
+    </section>
 
-<li><a href="#rsvp">RSVP</a></li>
+    <!-- FOOTER -->
+    <footer>
+        <p class="footer-names">Nubia & Pedro Henrique</p>
+        <div class="footer-divider"></div>
+        <p class="footer-date">05 de Dezembro de 2026</p>
+        <p class="footer-copy">Feito com amor</p>
+    </footer>
 
-</ul>
-
-</nav>
-
-<section class="hero-content">
-
-<h1>Pedro Henrique</h1>
-
-<h1 class="e">&</h1>
-
-<h1>Núbia</h1>
-
-<p>
-
-Com alegria convidamos você para celebrar este dia tão especial conosco.
-
-</p>
-
-<h3>05 de Dezembro de 2026 • 16:00</h3>
-    
-<div id="countdown">
-
-    <div class="tempo">
-        <span id="days">00</span>
-        <small>Dias</small>
-    </div>
-
-    <div class="tempo">
-        <span id="hours">00</span>
-        <small>Horas</small>
-    </div>
-
-    <div class="tempo">
-        <span id="minutes">00</span>
-        <small>Minutos</small>
-    </div>
-
-    <div class="tempo">
-        <span id="seconds">00</span>
-        <small>Segundos</small>
-    </div>
-
-</div>
-<a class="botao" href="#rsvp">
-Confirmar Presença
-</a>
-</section>
-</header>
-
-<section id="historia">
-<h2 class="titulo-secao">Nossa História</h2>
-<p>
-Em breve vocês conhecerão um pouco da nossa história...
-</p>
-</section>
-
-<section id="evento">
-<h2 class="titulo-secao">Informações</h2>
-
-<h3>👔 Dress Code</h3>
-<p>Esporte Fino</p>
-
-<h3>📍 Local</h3>
-<p>Paróquia São Francisco de Assis</p>
-
-<div class="mapa-container">
-
-    <iframe
-        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3790.646282251703!2d-47.9410472!3d-18.1802013!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94a66513260a61a5%3A0x88a2229db6df123f!2sPar%C3%B3quia%20S%C3%A3o%20Francisco%20de%20Assis!5e0!3m2!1spt-BR!2sbr!4v1784168814938!5m2!1spt-BR!2sbr"
-        loading="lazy"
-        allowfullscreen
-        referrerpolicy="strict-origin-when-cross-origin">
-    </iframe>
-
-</div>
-</section>
-
-<section id="galeria">
-<h2 class="titulo-secao">Galeria</h2>
-
-<img src="assets/img/foto1.jpg" width="300">
-<img src="assets/img/foto2.jpg" width="300">
-<img src="assets/img/foto3.jpg" width="300">
-
-</section>
-
-<section>
-<h2 class="titulo-secao">Música</h2>
-
-<audio controls>
-<source src="assets/music/musica.mp3" type="audio/mpeg">
-</audio>
-
-</section>
-
-<section id="rsvp">
-
-<h2 class="titulo-secao">Confirmação de Presença</h2>
-
-<p>Clique no botão abaixo.</p>
-
-<a href="https://forms.gle/SEUFORMULARIO" target="_blank">
-Confirmar Presença
-</a>
-
-</section>
-
-<footer>
-<p>Pedro Henrique & Núbia ❤️</p>
-</footer>
-
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>
